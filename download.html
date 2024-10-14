@@ -1,6 +1,41 @@
 <html>
 <style>
 
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Consolas, monaco, monospace;
+    color: rgb(0, 255, 0);
+    background-color: black;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+}
+
 .center {
   display: block;
   margin-left: auto;
@@ -110,6 +145,7 @@ p {
 </head>
 
 <body style="background-color:black;">
+    <div class="content">
 	<button class="greenButton" onclick='window.location.href = "https://arda-guler.github.io/OrbitSim3D-web/"'>Home</button>
 	<button class="greenButton" onclick='window.location.href = "https://arda-guler.github.io/OrbitSim3D-web/docs.html"'>Documentation</button>
 	<button class="greenButton" onclick='window.location.href = "https://arda-guler.github.io/OrbitSim3D-web/gallery.html"'>Gallery</button>
@@ -117,15 +153,18 @@ p {
 	<button class="redButton" disabled>Downloads</button>
 	<button class="cyanButton" onclick='window.location.href = "https://github.com/arda-guler/orbitSim3D"'>Source Code on Github</button>
 	<button class="cyanButton" onclick='window.location.href = "https://github.com/arda-guler/orbitSim3D/issues/new/choose"'>Report Bugs</button>
+    </div>
 	
 	<br><br>
 	<img src="imgs/download.jpg" class="center40">
 	<br><br>
 	
 	<h1 style="color:rgb(0,255,0);">Downloads</h1>
+    <div class="content">
 	<button class="redButton" onclick='window.location.href = "https://github.com/arda-guler/orbitSim3D/archive/refs/heads/master.zip"'>Download Source Code (Python 3)</button><br><br>
 	<button class="redButton" onclick='window.location.href = "https://github.com/arda-guler/orbitSim3D/releases/download/v1.11/OS3D_v1.11_win.zip"'>Download Latest Windows Binary (v1.11 Galaxy Epoch)</button><br><br>
 	<button class="redButton" onclick='window.location.href = "https://github.com/arda-guler/orbitSim3D/releases"'>Previous Versions</button>
+    </div>
 
 	<br>
 	<p class="copyright">(C) arda-guler, 2021 - 2024. OrbitSim3D is licensed under <a href="https://github.com/arda-guler/orbitSim3D/blob/master/LICENSE" style="color:#00bf00">MIT License</a>.</p>

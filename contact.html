@@ -2,6 +2,41 @@
 
 <style>
 
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Consolas, monaco, monospace;
+    color: rgb(0, 255, 0);
+    background-color: black;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+}
+
 .center {
   display: block;
   margin-left: auto;
@@ -112,6 +147,7 @@ p {
 
 <body style="background-color:black;">
 
+    <div class="content">
 	<button class="greenButton" onclick='window.location.href = "https://arda-guler.github.io/OrbitSim3D-web/"'>Home</button>
 	<button class="greenButton" onclick='window.location.href = "https://arda-guler.github.io/OrbitSim3D-web/docs.html"'>Documentation</button>
 	<button class="greenButton" onclick='window.location.href = "https://arda-guler.github.io/OrbitSim3D-web/gallery.html"'>Gallery</button>
@@ -119,15 +155,18 @@ p {
 	<button class="redButton" onclick='window.location.href = "https://arda-guler.github.io/OrbitSim3D-web/download.html"'>Downloads</button>
 	<button class="cyanButton" onclick='window.location.href = "https://github.com/arda-guler/orbitSim3D"'>Source Code on Github</button>
 	<button class="cyanButton" onclick='window.location.href = "https://github.com/arda-guler/orbitSim3D/issues/new/choose"'>Report Bugs</button>
+    </div>
 
-	<img src="imgs/antenna0001.png" class="center20">
+	<img src="imgs/antenna0002.png" class="center20">
 	<br><br>
 	<h1 style="color:rgb(0,255,0);">Contact Information</h1>
+    <div class="content">
 	<p style="color:rgb(0,255,0);">e-mail: ardaguler09 [_at_] gmail.com<br>
 	github: arda-guler (https://github.com/arda-guler)<br>
 	youtube: https://www.youtube.com/channel/UCMEiP5Hhn5NSDCLcCBcCuJA<br>
 	website: duh<br>
 	</p>
+    </div>
 	
 	<br><br>
 	<p class="copyright">(C) arda-guler, 2021 - 2024. OrbitSim3D is licensed under <a href="https://github.com/arda-guler/orbitSim3D/blob/master/LICENSE" style="color:#00bf00">MIT License</a>.</p>
