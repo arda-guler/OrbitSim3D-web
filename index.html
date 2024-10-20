@@ -57,6 +57,11 @@ p {
 	white-space:pre;
 }
 
+.phead a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .greenButton {
   background-color: #00DD00;
   border: none;
@@ -156,7 +161,7 @@ p {
 <button class="cyanButton" onclick='window.location.href = "https://github.com/arda-guler/orbitSim3D"'>Source Code on Github</button>
 <button class="cyanButton" onclick='window.location.href = "https://github.com/arda-guler/orbitSim3D/issues/new/choose"'>Report Bugs</button>
 </div>
-<p class=phead style="color:rgb(0,255,0);">
+<p class=phead id="ascii-art" style="color:rgb(0,255,0);">
 [?`                                                                                                  
   ;|         .{oaFKHEHqP0)|`                                                                         
     -\`  `*UMWWWWWWWWWWWWWWWH3|            9MMMMMMMMNo   zNMMMMMMMMs   (NMMMMMMMA'  'MMMMMMMMMMH.    
@@ -178,6 +183,7 @@ p {
              `!oaFKHEHqP0)|`        _7^     `.......`     `........     `........   `..........      
                                       ,|                                                             
 	</p>
+
 	<h1 style="color:rgb(0,255,0);">Welcome to OrbitSim3D website!</h1>
 	<p style="color:rgb(0,255,0);">OrbitSim3D is an open source n-body gravitational systems and space mission simulator.<br>
 	It is written entirely in Python and has been tested successfully on Windows 10, 11 and Linux Mint 21 operating systems.<br><br>
@@ -190,6 +196,16 @@ p {
 	<br>
 	<p class="copyright">(C) arda-guler, 2021 - 2024. OrbitSim3D is licensed under <a href="https://github.com/arda-guler/orbitSim3D/blob/master/LICENSE" style="color:#00bf00">MIT License</a>.</p>
 	
+  <script>
+    const asciiArtElement = document.getElementById('ascii-art');
+    const asciiText = asciiArtElement.textContent;
+    const randomPosition = Math.floor(Math.random() * asciiText.length);
+    const before = asciiText.slice(0, randomPosition);
+    const selectedChar = asciiText[randomPosition];
+    const after = asciiText.slice(randomPosition + 1);
+    const linkedChar = `<a href="https://motherfuckingwebsite.com/" target="_blank">${selectedChar}</a>`;
+    asciiArtElement.innerHTML = before + linkedChar + after;
+  </script>
 
 </body>
 
